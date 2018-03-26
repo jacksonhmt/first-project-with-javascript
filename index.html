@@ -2,25 +2,130 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Principal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet"> 
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Principal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="font-boogaloo text-center title-page">My Apps</h1>
-        <p>Relógio em tempo real</p>
-        
-            <div class="text-center" id="real-clock"></div>
-        
-        <p>Média em JavaScript</p>
-        <p id="media"></p>
+
+  <!-- HEADER - TITLE AND WATCH -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <h1 class="font-boogaloo title-page">MY APPs</h1>
+      </div>
+      <div class="col-sm-2">
+        <div class="container-clock">
+          <div class="text-center" id="real-clock"></div>
+        </div>
+      </div>
     </div>
-    <script src="js/main.js"></script>
+  </div>
+
+  <div class="container container-white">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <span class="navbar-text" style="padding-right: 100px">
+          Learning and programming in Javascript!
+        </span>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- LINK FOR THE CALCULATOR -->
+    <div class="text-center">
+      <a href="" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src="img/calculator.png" alt="">
+        <br>
+        <p>Calculator</p>
+      </a>
+    </div>
+
+    <!-- MODAL - CALCULATOR-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Calculator</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">First Number</label>
+                <input type="text" class="form-control" id="firstNumber" aria-describedby="emailHelp" placeholder="Enter number">
+                <small id="messageOfValidationToFirstNumber" class="form-text color-red"></small>
+              </div>
+              <div class="form-group">
+                <label for="selectOperator">Select Operator</label>
+                <select class="form-control" id="selectOperator">
+                  <option selected>Select the Operator</option>
+                  <option>+</option>
+                  <option>-</option>
+                  <option>*</option>
+                  <option>/</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Second Number</label>
+                <input type="text" class="form-control" id="secondNumber" placeholder="Enter number">
+                <small id="messageOfValidationToSecondNumber" class="form-text color-red"></small>
+              </div>
+              <div class="row">
+                <div class="col-sm-7">
+                    <button type="button" class="btn btn-primary" onclick="validator(); calculate();">Result</button>
+                </div>
+                <div class="col-sm-5">
+                    <p id="result">Shows the Result</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="text-center" style="color:rgb(255, 255, 255)">@Desenvolvido por
+      <a href="" target="_blank">
+        JHMT
+      </a>
+    </p>
+  </footer>
+
+  <!-- IMPORTS -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/calculator.js"></script>
 </body>
 
 </html>
