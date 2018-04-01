@@ -1,0 +1,49 @@
+<div class="modal fade" id="calculator-modal" tabindex="-1" role="dialog" aria-labelledby="calculator-modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="../img/calculator/calculator.png" width="40px" alt="image the calculator">
+          <h5 class="mt-1 modal-title" id="exampleModalLongTitle">Calculator</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">First Number</label>
+              <input type="text" class="form-control" id="firstNumber" aria-describedby="emailHelp" placeholder="Enter number">
+              <small id="messageOfValidationToFirstNumber" class="form-text color-red"></small>
+            </div>
+            <div class="form-group">
+              <label for="selectOperator">Select Operator</label>
+              <select class="form-control" id="selectOperator">
+                <option selected>Select the Operator</option>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+              </select>
+              <small id="messageOfValidationToOperation" class="form-text color-red"></small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Second Number</label>
+              <input type="text" class="form-control" id="secondNumber" placeholder="Enter number">
+              <small id="messageOfValidationToSecondNumber" class="form-text color-red"></small>
+            </div>
+            <div class="row">
+              <div class="col-sm-7">
+                <button type="button" class="btn btn-primary" onclick="validator(); calculate();">Result</button>
+              </div>
+              <div class="col-sm-5">
+                <p id="result">Shows the Result</p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>

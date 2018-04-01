@@ -1,0 +1,54 @@
+<!-- MODAL - HASH GAME -->
+<div class="modal fade bd-example-modal-lg" id="hash-modal" tabindex="-1" role="dialog" aria-labelledby="hash-modalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                    <img src="../img/hash/hash-40px.png" alt="hash title"> HASH</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="mb-1" src="../img/hash/1.png" width="40px" alt="">
+                            <h3>Player 1</h3>
+                            <img src="../img/hash/mark.png" id="playerOne">
+                        </div>
+                        <div class="col-md-6">
+                            <div id="jogo">
+                                <div class="linha">
+                                    <div class="house" id="house1"></div>
+                                    <div class="house" id="house2"></div>
+                                    <div class="house" id="house3"></div>
+                                </div>
+                                <div class="linha">
+                                    <div class="house" id="house4"></div>
+                                    <div class="house" id="house5"></div>
+                                    <div class="house" id="house6"></div>
+                                </div>
+                                <div class="linha">
+                                    <div class="house" id="house7"></div>
+                                    <div class="house" id="house8"></div>
+                                    <div class="house" id="house9"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img class="mb-1" src="../img/hash/2.png" width="40px" alt="">
+                            <h3>Player 2</h3>
+                            <img src="" id="playerTwo">
+                        </div>
+                    </div>
+                    <div id="resultado"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit game</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,13 +4,13 @@ $(function () {
 
     // CHECK HOUSES ALIKE
     function houseAlike(a, b, c) {
-        var casaA = $("#casa" + a);
-        var casaB = $("#casa" + b);
-        var casaC = $("#casa" + c);
+        var houseA = $("#house" + a);
+        var houseB = $("#house" + b);
+        var houseC = $("#house" + c);
 
-        var bgA = $("#casa" + a).css("background-image");
-        var bgB = $("#casa" + b).css("background-image");
-        var bgC = $("#casa" + c).css("background-image");
+        var bgA = $("#house" + a).css("background-image");
+        var bgB = $("#house" + b).css("background-image");
+        var bgC = $("#house" + c).css("background-image");
 
         if ((bgA == bgB) && (bgB == bgC) && (bgA != "none" && bgA != "")) {
             if (bgA.indexOf("1.png") >= 0)
@@ -33,19 +33,20 @@ $(function () {
             houseAlike(3, 6, 9) ||
             houseAlike(1, 5, 9) ||
             houseAlike(3, 5, 7)) {
-            $("#resultado").html('<h3 class="mt-4">O jogador ' + vencedor + " venceu! </h3>");
-            $(".casa").off("click");
+            $("#resultado").html('<h3 class="mt-4">The player ' + vencedor + " won!  " +
+                '<img src="./../img/hash/winner-man.png" width="50px" class="ml-3"></img>' + "</h3>");
+            $(".house").off("click");
 
             // MARK WINNER
             markWinner();
         }
     }
 
-    $(".casa").click(function () {
+    $(".house").click(function () {
         var bg = $(this).css("background-image");
         showPlayerTime();
         if (bg == "none" || bg == "") {
-            var fig = "url(./img/hash/" + vez.toString() + ".png)";
+            var fig = "url(./../img/hash/" + vez.toString() + ".png)";
             $(this).css("background", fig);
             vez = (vez == 1 ? 2 : 1);
             checkGameEnd();
@@ -56,10 +57,10 @@ $(function () {
     function showPlayerTime() {
         if (vez == 1) {
             document.getElementById("playerOne").src = "";
-            document.getElementById("playerTwo").src = "./img/hash/mark.png";
+            document.getElementById("playerTwo").src = "./../img/hash/mark.png";
         } else {
             document.getElementById("playerTwo").src = "";
-            document.getElementById("playerOne").src = "./img/hash/mark.png";
+            document.getElementById("playerOne").src = "./../img/hash/mark.png";
         }
     }
 
@@ -67,10 +68,10 @@ $(function () {
     function markWinner() {
         if (vencedor == 1) {
             document.getElementById("playerTwo").src = "";
-            document.getElementById("playerOne").src = "./img/hash/winner.png";
+            document.getElementById("playerOne").src = "./../img/hash/winner.png";
         } else {
             document.getElementById("playerOne").src = "";
-            document.getElementById("playerTwo").src = "./img/hash/winner.png";
+            document.getElementById("playerTwo").src = "./../img/hash/winner.png";
         }
     }
 });
